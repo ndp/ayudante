@@ -20,10 +20,10 @@ This asserts that the lists are the same size and have the same items. Any
 difference is reported.
 
 Example:
-
+<code>
     assert_list_of_candy_bars [:almond_joys], CandyBar.find_nutty()
     assert_list_of_candy_bars [:almond_joys, :m_and_ms], CandyBar.find_nutty()
-
+</code>
 
 h4. assert_set_of_N
 
@@ -31,10 +31,10 @@ This asserts that the lists are the same size and have the same items, but order
 is ignored.
 
 Example:
-
+<code>
     assert_set_of_candy_bars [:almond_joys], CandyBar.find_nutty()
     assert_set_of_candy_bars [:almond_joys, :m_and_ms], CandyBar.find_nutty()
-
+</code>
 
 h3. Pre and Post Condition Checks
 
