@@ -1,20 +1,20 @@
-= ayudante
+h1. ayudante
 
 * http://github.com/ndp/ayudante
 
-== DESCRIPTION:
+h2. DESCRIPTION:
 
 Collection of useful helpers for unit/functional/integration tests.
 
 
-== FEATURES/PROBLEMS:
+h2. FEATURES/PROBLEMS:
 
-h2. Fixture Helpers
+h3. Fixture Helpers
 
 This uses method_missing to provide additional functions for each of your 
 fixtures:
 
-h3. assert_list_of_N
+h4. assert_list_of_N
 
 This asserts that the lists are the same size and have the same items. Any
 difference is reported.
@@ -25,7 +25,7 @@ Example:
     assert_list_of_candy_bars [:almond_joys, :m_and_ms], CandyBar.find_nutty()
 
 
-h3. assert_set_of_N
+h4. assert_set_of_N
 
 This asserts that the lists are the same size and have the same items, but order 
 is ignored.
@@ -36,7 +36,7 @@ Example:
     assert_set_of_candy_bars [:almond_joys, :m_and_ms], CandyBar.find_nutty()
 
 
-h2. Pre and Post Condition Checks
+h3. Pre and Post Condition Checks
 
 h3. assert_changes
 
