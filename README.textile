@@ -37,19 +37,18 @@ h3. Pre and Post Condition Checks
 
 h3. assert_changes
 
-Assert that a any Ruby expression changes. Instead of: 
-<pre><code>    assert a != 'world'
-    a = 'world'
-    assert_equal 'world', a
-</code></pre>
-Write DRY:
+Write:
 <pre><code>    assert_changes 'a' do
         a = 'world'
     end
 </code></pre>
+instead of: 
+<pre><code>    assert a != 'world'
+    a = 'world'
+    assert_equal 'world', a
+</code></pre>
 
-The string <code>'a'</code> passed to assert changes is evaluated in the block context, both before and after the block is run. The first eval is call the *pre-condition*, and the
-second the *post-condition*.
+The string <code>'a'</code> passed to assert changes is evaluated in the block context, both before and after the block is run. The first eval is call the *pre-condition*, and the second the *post-condition*.
 
 Be explicit about a state change by specifying both the starting and ending values using an expression pointing to array of before and after values:
 <pre><code>    o.answer = 'yes'
@@ -115,12 +114,10 @@ h2. REQUIREMENTS:
 
 h2. INSTALL:
 
-* Installing the gem: <pre>
-  <code>sudo gem install ndp-ayudante --source=http://gems.github.com</code></pre>
+* Installing the gem: <pre><code>sudo gem install ndp-ayudante --source=http://gems.github.com</code></pre>
 
 * or in environment.rb
-<pre><code>
-  Rails::Initializer.run do |config|
+<pre><code>  Rails::Initializer.run do |config|
     config.gem "ndp-ayudante", :source => "http://gems.github.com", :lib=>'ayudante'
   end</code></pre>
 
