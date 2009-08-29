@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ayudante}
-  s.version = "0.0.3"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andy Peterson"]
@@ -13,12 +13,14 @@ Gem::Specification.new do |s|
   s.description = %q{Assertions for working with fixtures more easily. Assertions to assert pre/post conditions concisely.}
   s.email = %q{ndp@mac.com}
   s.extra_rdoc_files = [
-    "README.markdown"
+    "README.textile"
   ]
   s.files = [
-    "History.txt",
+    ".gitignore",
+     "History.txt",
      "Manifest.txt",
      "PostInstall.txt",
+     "README.textile",
      "Rakefile",
      "VERSION",
      "ayudante.gemspec",
