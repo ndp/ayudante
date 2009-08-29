@@ -20,9 +20,8 @@ This asserts that the lists are the same size and have the same items. Any
 difference is reported.
 
 Example:
-<pre><code>
-    assert_list_of_candy_bars [:almond_joys], CandyBar.find_nutty()
-    assert_list_of_candy_bars [:almond_joys, :m_and_ms], CandyBar.find_nutty()
+<pre><code>fixtures :candy_bars
+assert_list_of_candy_bars [:almond_joys, :m_and_ms], CandyBar.find_nutty()
 </code></pre>
 
 h4. assert_set_of_N
@@ -31,9 +30,7 @@ This asserts that the lists are the same size and have the same items, but order
 is ignored.
 
 Example:
-<pre><code>
-    assert_set_of_candy_bars [:almond_joys], CandyBar.find_nutty()
-    assert_set_of_candy_bars [:almond_joys, :m_and_ms], CandyBar.find_nutty()
+<pre><code>assert_set_of_candy_bars [:almond_joys, :m_and_ms], CandyBar.find_nutty()
 </code></pre>
 
 h3. Pre and Post Condition Checks
@@ -46,23 +43,13 @@ Assert that a any Ruby expression changes. Instead of:
     assert_equal 'world', a
 </code></pre>
 Write DRY:
-<pre><code>
-    assert_changes 'a' do
+<pre><code>    assert_changes 'a' do
         a = 'world'
     end
 </code></pre>
 
-The string <code>'a'</code> passed to assert changes is evaluated in the block context, both before and after the block is run. The first eval is call the "pre-condition", and the
-second the "post-condition".
-
-Assert that several things change by passing an array:
-
-<pre><code>    a,b = 'hello','hi'
-    assert_changes ['a','b'] do
-        a = 'world'
-        b = 'earth'
-    end
-</code></pre>
+The string <code>'a'</code> passed to assert changes is evaluated in the block context, both before and after the block is run. The first eval is call the *pre-condition*, and the
+second the *post-condition*.
 
 Be explicit about a state change by specifying both the starting and ending values using an expression pointing to array of before and after values:
 <pre><code>    o.answer = 'yes'
@@ -70,10 +57,6 @@ Be explicit about a state change by specifying both the starting and ending valu
       o.answer = 'no'
     end
 </code></pre>    
-
-Sometimes you don't care about the original value, such as a value from the
-fixture, but you need to make sure it starts out different than the final
-result (otherwise the test is invalid). Pass just the final value. 
 
 When given one value, it is considered the post-condition value. 
 The precondition is that the value does NOT equal it:
@@ -84,7 +67,16 @@ The precondition is that the value does NOT equal it:
     end
 </code></pre>
 
-Pass multiple pre/post conditions of arbitrary complexity:
+Assert that several things change by passing an array:
+
+<pre><code>    a,b = 'hello','hi'
+    assert_changes ['a','b'] do
+        a = 'world'
+        b = 'earth'
+    end
+</code></pre>
+
+Or use a hash, and pass multiple pre/post conditions of arbitrary complexity:
 
 <pre><code>      assert_changes 'post(:a).status' => [:preview, :published],
                             'comment(:c).status' => [:preview, :deleted] do
@@ -94,7 +86,7 @@ Pass multiple pre/post conditions of arbitrary complexity:
 
 h3. assert_no_changes
 
-assert_no_changes is a modified version of this. It has slightly extended parameter possibilities:
+assert_no_changes has an extended parameter possibilities:
 
 <pre><code>    i,j = 'hello','hi'
     assert_no_changes 'i' do ...                # i (before) == i (after)
@@ -123,7 +115,8 @@ h2. REQUIREMENTS:
 
 h2. INSTALL:
 
-* <pre><code>sudo gem install ndp-ayudante --source=http://gems.github.com</pre></code>
+* Installing the gem: <pre>
+  <code>sudo gem install ndp-ayudante --source=http://gems.github.com</code></pre>
 
 * or in environment.rb
 <pre><code>
