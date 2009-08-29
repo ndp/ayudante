@@ -1,8 +1,0 @@
-Include test helpers in test_helper.rb
-
-  include Ayudante
-  
-or
-  
-  include AssertChanges
-  include AssertFixtures
