@@ -46,8 +46,7 @@ Assert that a any Ruby expression changes. Instead of:
     assert_equal 'world', a
 </code></pre>
 Write DRY:
-<pre><code>    include AssertChanges
-    ...
+<pre><code>
     assert_changes 'a' do
         a = 'world'
     end
@@ -118,30 +117,27 @@ Note that assert_changes supports the :no_change symbol:
 </code></pre>
 
 
-h2. SYNOPSIS:
-
-
 h2. REQUIREMENTS:
 
 * none
 
 h2. INSTALL:
 
-* sudo gem install http://github.com/ndp/ayudante/tree/master
+* <pre><code>sudo gem install ndp-ayudante --source=http://gems.github.com</pre></code>
 
-* in environment.rb
+* or in environment.rb
 <pre><code>
   Rails::Initializer.run do |config|
     config.gem "ndp-ayudante", :source => "http://gems.github.com", :lib=>'ayudante'
-    ...</code></pre>
+  end</code></pre>
 
-== TO COME
+h2. TO COME
 
 * Better error messages on fixture helpers
 * Add assert_includes_N fixture helper
 * Add assert_excludes_N fixture helper
 
-== LICENSE:
+h2. LICENSE:
 
 (The MIT License)
 
