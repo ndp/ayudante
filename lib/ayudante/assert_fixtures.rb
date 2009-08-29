@@ -1,4 +1,4 @@
-module AssertFixtures
+module Ayudante::AssertFixtures
 
   # Given a table/fixture name and set of expected fixtured, identified their symbols,
   # makes sure the actual is a list/set of the same items.

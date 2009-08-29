@@ -1,6 +1,11 @@
-$:.unshift(File.dirname(__FILE__)) unless
-  $:.include?(File.dirname(__FILE__)) || $:.include?(File.expand_path(File.dirname(__FILE__)))
+#$:.unshift(File.dirname(__FILE__)) unless
+#  $:.include?(File.dirname(__FILE__)) || #$:.include?(File.expand_path(File.dirname(__FILE__)))
 
 module Ayudante
-  VERSION = '0.0.1'
+end
+
+if defined? Spec
+  require File.dirname(__FILE__) <<  '/ayudante/rspec.rb'
+else
+  require File.dirname(__FILE__) <<  '/ayudante/test_unit.rb'
 end

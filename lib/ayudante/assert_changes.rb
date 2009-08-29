@@ -1,4 +1,4 @@
-module AssertChanges
+module Ayudante::AssertChanges
 
   # Assertion that a specific state changes during invocation of the
   # passed in block.

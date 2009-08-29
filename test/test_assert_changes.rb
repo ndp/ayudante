@@ -1,9 +1,10 @@
 require 'test/unit'
+module Ayudante; end
 require "#{File.dirname(__FILE__)}/../lib/ayudante/assert_changes.rb"
 
 class AssertChangesTest < Test::Unit::TestCase
 
-  include ::AssertChanges
+  include Ayudante::AssertChanges
 
   def test_detects_single_implicit_precondition_failure
     assert_raises Test::Unit::AssertionFailedError do

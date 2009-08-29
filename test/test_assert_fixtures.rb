@@ -1,5 +1,6 @@
 require 'set.rb'
 require 'test/unit'
+module Ayudante; end
 require "#{File.dirname(__FILE__)}/../lib/ayudante/assert_fixtures.rb"
 
 class CandyBar
@@ -7,7 +8,7 @@ end
 
 class AssertFixturesTest < Test::Unit::TestCase
 
-  include ::AssertFixtures
+  include Ayudante::AssertFixtures
 
   # faux fixture
   def candy_bars(sym)

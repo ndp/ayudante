@@ -118,17 +118,22 @@ Note that assert_changes supports the :no_change symbol:
 </code></pre>
 
 
-== SYNOPSIS:
+h2. SYNOPSIS:
 
 
-== REQUIREMENTS:
+h2. REQUIREMENTS:
 
 * none
 
-== INSTALL:
+h2. INSTALL:
 
 * sudo gem install http://github.com/ndp/ayudante/tree/master
 
+* in environment.rb
+<pre><code>
+  Rails::Initializer.run do |config|
+    config.gem "ndp-ayudante", :source => "http://gems.github.com", :lib=>'ayudante'
+    ...</code></pre>
 
 == TO COME
 

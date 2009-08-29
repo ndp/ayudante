@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ayudante}
-  s.version = "0.2.0"
+  s.version = "0.5.13"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andy Peterson"]
-  s.date = %q{2009-08-28}
+  s.date = %q{2009-08-29}
   s.description = %q{Assertions for working with fixtures more easily. Assertions to assert pre/post conditions concisely.}
   s.email = %q{ndp@mac.com}
   s.extra_rdoc_files = [
@@ -24,12 +24,11 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "ayudante.gemspec",
+     "init.rb",
      "lib/ayudante.rb",
      "lib/ayudante/assert_changes.rb",
      "lib/ayudante/assert_fixtures.rb",
-     "script/console",
-     "script/destroy",
-     "script/generate",
+     "lib/ayudante/test_unit.rb",
      "test/test_assert_changes.rb",
      "test/test_assert_fixtures.rb",
      "test/test_ayudante.rb",
