@@ -5,7 +5,7 @@ h1. ayudante
 
 h2. DESCRIPTION:
 
-Collection of useful helpers for writing unit/functional/integration tests.
+Collection of useful helpers for writing unit/functional/integration testunit tests.
 
 
 h2. FEATURES/PROBLEMS:
