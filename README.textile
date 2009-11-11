@@ -1,10 +1,11 @@
 h1. ayudante
 
 * http://github.com/ndp/ayudante
+* Continuous Integration at http://runcoderun.com/ndp/ayudante
 
 h2. DESCRIPTION:
 
-Collection of useful helpers for unit/functional/integration tests.
+Collection of useful helpers for writing unit/functional/integration tests.
 
 
 h2. FEATURES/PROBLEMS:
