@@ -12,6 +12,15 @@ module Ayudante::AssertFixtures
     assert_equal expected_set, actual_set, "Difference: #{(expected_set - actual_set).sort.inspect}. #{message}"
   end
 
+  def assert_contains_fixtures(fixture_name, expected, actual, message = '')
+    expected = objects_from_fixture_syms(fixture_name, expected)
+    assert expected.length <= actual.length, "Expected #{expected.length} but got #{actual.length}. #{message}"
+
+    expected_set = ::Set.new(expected)
+    actual_set = ::Set.new(actual)
+    assert (expected_set - actual_set).length == 0, "Difference: #{(expected_set - actual_set).sort.inspect}. #{message}"
+  end
+
 
   def assert_list_of_fixtures(fixture_name, expected, actual, message='')
     assert_equal expected.length, actual.length
@@ -28,6 +37,8 @@ module Ayudante::AssertFixtures
       send(:assert_list_of_fixtures, method.to_s.gsub(/^assert_list_of_/, '').to_sym, *args)
     elsif method.to_s[/^assert_set_of_.*/]
       send(:assert_set_of_fixtures, method.to_s.gsub(/^assert_set_of_/, '').to_sym, *args)
+    elsif method.to_s[/^assert_contains_.*/]
+      send(:assert_contains_fixtures, method.to_s.gsub(/^assert_contains_/, '').to_sym, *args)
     else
       super
     end

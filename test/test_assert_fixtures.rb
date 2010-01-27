@@ -1,6 +1,8 @@
 require 'set.rb'
 require 'test/unit'
-module Ayudante; end
+module Ayudante
+  ;
+end
 require "#{File.dirname(__FILE__)}/../lib/ayudante/assert_fixtures.rb"
 
 class CandyBar
@@ -41,6 +43,22 @@ class AssertFixturesTest < Test::Unit::TestCase
     end
   end
 
+  def test_assert_contains_fixtures
+    assert_contains_fixtures :candy_bars, [], []
+    assert_contains_fixtures :candy_bars, [:almond_joys], [candy_bars(:almond_joys)]
+    assert_contains_fixtures :candy_bars, [:almond_joys, :mounds], [candy_bars(:mounds), candy_bars(:almond_joys)]
+    assert_contains_fixtures :candy_bars, [:almond_joys], [candy_bars(:mounds), candy_bars(:almond_joys)]
+    assert_contains_fixtures :candy_bars, [:mounds], [candy_bars(:mounds), candy_bars(:almond_joys)]
+    assert_contains_fixtures :candy_bars, [], [candy_bars(:mounds), candy_bars(:almond_joys)]
+    assert_raises Test::Unit::AssertionFailedError do
+      assert_contains_fixtures :candy_bars, [:almond_joys, :mounds], [candy_bars(:mounds), candy_bars(:m_and_ms)], 'Different'
+    end
+    assert_raises Test::Unit::AssertionFailedError do
+      assert_contains_fixtures :candy_bars, [:almond_joys, :mounds], [candy_bars(:mounds)], 'Missing item'
+    end
+    assert_contains_fixtures :candy_bars, [:almond_joys, :mounds], [candy_bars(:mounds), candy_bars(:almond_joys), candy_bars(:m_and_ms)], 'Extra item'
+  end
+
   def test_assert_list_of_fixtures
     assert_list_of_fixtures :candy_bars, [], []
     assert_list_of_fixtures :candy_bars, [:almond_joys], [candy_bars(:almond_joys)]
@@ -72,6 +90,18 @@ class AssertFixturesTest < Test::Unit::TestCase
     assert_raises Test::Unit::AssertionFailedError do
       assert_set_of_candy_bars [:almond_joys, :mounds], [candy_bars(:mounds), candy_bars(:almond_joys), candy_bars(:m_and_ms)], 'Extra item'
     end
+
+    assert_contains_candy_bars [], []
+    assert_contains_candy_bars [:almond_joys], [candy_bars(:almond_joys)]
+    assert_contains_candy_bars [:almond_joys, :mounds], [candy_bars(:mounds), candy_bars(:almond_joys)]
+    assert_raises Test::Unit::AssertionFailedError do
+      assert_contains_candy_bars [:almond_joys, :mounds], [candy_bars(:mounds), candy_bars(:m_and_ms)], 'Different'
+    end
+    assert_raises Test::Unit::AssertionFailedError do
+      assert_contains_candy_bars [:almond_joys, :mounds], [candy_bars(:mounds)], 'Missing item'
+    end
+    assert_contains_candy_bars [:almond_joys, :mounds], [candy_bars(:mounds), candy_bars(:almond_joys), candy_bars(:m_and_ms)], 'Extra item'
+
     assert_list_of_candy_bars [], []
     assert_list_of_candy_bars [:almond_joys], [candy_bars(:almond_joys)]
     assert_list_of_candy_bars [:almond_joys, :mounds], [candy_bars(:almond_joys), candy_bars(:mounds)]
