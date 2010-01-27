@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project relativePaths="false" version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test_ayudante.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_assert_fixtures.rb" afterPath="$PROJECT_DIR$/test/test_assert_fixtures.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/ayudante/assert_fixtures.rb" afterPath="$PROJECT_DIR$/lib/ayudante/assert_fixtures.rb" />
-    </list>
+    <list default="true" readonly="true" name="Default" comment="" />
     <ignored path="ayudante.iws" />
     <ignored path=".idea/workspace.xml" />
   </component>
@@ -81,10 +77,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="assert_fixtures.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="assert_fixtures.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ayudante/assert_fixtures.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="72" selection-start="1948" selection-end="1948" vertical-scroll-proportion="-0.023354564">
+            <state line="40" column="72" selection-start="1948" selection-end="1948" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.textile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.textile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="0" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.84210527">
               <folding />
             </state>
           </provider>
@@ -135,6 +140,7 @@
     </navigator>
   </component>
   <component name="PropertiesComponent">
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -328,7 +334,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1436" height="878" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Web Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" />
       <window_info id="Dataflow to this" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" />
@@ -345,7 +351,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980132" sideWeight="0.5" order="2" side_tool="false" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980132" sideWeight="0.5" order="2" side_tool="false" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" />
@@ -404,7 +410,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ayudante/assert_fixtures.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="72" selection-start="1948" selection-end="1948" vertical-scroll-proportion="-0.023354564">
+        <state line="40" column="72" selection-start="1948" selection-end="1948" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.textile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.84210527">
           <folding />
         </state>
       </provider>

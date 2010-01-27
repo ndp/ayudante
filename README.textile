@@ -34,6 +34,15 @@ Example:
 <pre><code>assert_set_of_candy_bars [:almond_joys, :m_and_ms], CandyBar.find_nutty()
 </code></pre>
 
+h4. assert_contains_N
+
+This asserts that all the items are found in the second parameter, but order
+is ignored.
+
+Example:
+<pre><code>assert_contains_candy_bars [:almond_joys, :m_and_ms], CandyBar.find_nutty()
+</code></pre>
+
 h3. Pre and Post Condition Checks
 
 h3. assert_changes
